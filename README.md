@@ -108,7 +108,7 @@ To reproduce the performance, we recommend that users try multiple training sess
 ## Labeled Segmentation Masks
 We annotated a subset of [Brno](https://drive.google.com/file/d/18giAtQdYH_lwVPj7rYEfmJ7B-ljP6_eZ/view?usp=sharing) datasets with pixel-level category labels, which may catalyze research on the colorization and semantic segmentation of nighttime TIR images.
 
-![Labeled Masks](https://github.com/FuyaLuo/FoalGAN/blob/main/docs/docs/Masks.png)
+![Labeled Masks](https://github.com/FuyaLuo/FoalGAN/blob/main/docs/docs/Masks.PNG)
 
 ## Evaluation
 <details>
