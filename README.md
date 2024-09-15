@@ -9,14 +9,14 @@ Pytorch implementation of the paper "Nighttime Thermal Infrared Image Colorizati
 >Stable imaging in adverse environments (e.g., total darkness) makes thermal infrared (TIR) cameras a prevalent option for night scene perception. However, the low contrast and lack of chromaticity of TIR images are detrimental to human interpretation and subsequent deployment of RGB-based vision algorithms. Therefore, it makes sense to colorize the nighttime TIR images by translating them into the corresponding daytime color images (NTIR2DC). Despite the impressive progress made in the NTIR2DC task, how to improve the translation performance of small object classes is under-explored. To address this problem, we propose a generative adversarial network incorporating feedback-based object appearance learning (FoalGAN). Specifically, an occlusion-aware mixup module and corresponding appearance consistency loss are proposed to reduce the context dependence of object translation. As a representative example of small objects in nighttime street scenes, we illustrate how to enhance the realism of traffic light by designing a traffic light appearance loss. To further improve the appearance learning of small objects, we devise a dual feedback learning strategy to selectively adjust the learning frequency of different samples. In addition, we provide pixel-level annotation for a subset of the Brno dataset, which can facilitate the research of NTIR image understanding under multiple weather conditions. Extensive experiments illustrate that the proposed FoalGAN is not only effective for appearance learning of small objects, but also outperforms other image translation methods in terms of semantic preservation and edge consistency for the NTIR2DC task. Compared with the state-of-the-art NTIR2DC approach, FoalGAN achieves at least 5.4% improvement in semantic consistency and at least 2% lead in edge consistency. 
 
 ## Prerequisites
-* Python 3.6 
-* Pytorch 1.1.0 and torchvision 0.3.0 
+* Python 3.8 
+* Pytorch 1.7.1 and torchvision 0.8.2 
 * TensorboardX
 * visdom
 * dominate
 * pytorch-msssim
 * kmeans_pytorch
-* CUDA 10.0.130, CuDNN 7.3, and Ubuntu 16.04.
+* CUDA 11.6.55, CuDNN 8.4, and Ubuntu 20.04.
 
 ## Data Preparation 
 Download [FLIR](https://www.flir.co.uk/oem/adas/adas-dataset-form/) and [Brno](https://github.com/Robotics-BUT/Brno-Urban-Dataset). First, the corresponding training set and test set images are sampled according to the txt files in the `./img_list/` folder. Then, all images are first resized to 500x400, and then crop centrally to obtain images with a resolution of 360x288. Finally, place all images into the corresponding dataset folders. Domain A and domain B correspond to the daytime visible image and the nighttime TIR image, respectively. As an example, the corresponding folder structure for the FLIR dataset is:
